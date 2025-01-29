@@ -59,12 +59,12 @@ def process_video(video_path, output_path=None, model_path=None, class_names=Non
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    video_path = r'Samlpe_Video.mp4'
-    output_path = r'Detection_Output.mp4'
-    # model_path = (r'Models\best.pt')
-    # model_path = (r'Model\best3.pt')
-    # model_path = (r'Model\gun_detection_yolo.pt')
-    model_path = (r'Model\Gun_Model.pt')
+    video_path = r'videos\Video2.mp4'
+    output_path = r'videos\output_videos\Detection_Output.mp4'
+     # Detecting weapond including Knife, Gun, and Sword
+    # model_path = (r'Models\best3.pt')
+    model_path = (r'Models\gun_detection_yolo.pt')
+    
 
-    class_names = ['gun','guns','gunss', 'rifle', 'pistol', 'RPG', 'machine gun' 'sword']
-    process_video(video_path, output_path, model_path, class_names=class_names, confidence_threshold=0.45, max_duration=100, save_video=True) 
+    class_names = ['Pistol','gun','guns','gunss', 'rifle', 'pistol', 'RPG', 'machine gun' 'sword']
+    process_video(video_path, output_path, model_path, class_names=class_names, confidence_threshold=0.25, max_duration=100, save_video=True) 
